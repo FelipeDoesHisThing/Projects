@@ -11,7 +11,7 @@ void Light::Init(int LightPin, int SwitchPin)
 
 void Light::Blink()
 {
-  int before = CheckState();
+  State before = CheckState();
 
   delay(200);
 
@@ -31,7 +31,7 @@ void Light::Blink()
   return;
 }
 
-int Light::CheckState()
+Light::State Light::CheckState()
 {
   if(pinSwitch == HIGH) switchState = ON;
   else switchState = OFF;

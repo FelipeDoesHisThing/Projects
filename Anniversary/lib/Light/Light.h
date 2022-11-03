@@ -16,15 +16,11 @@ class Light
     void Blink();
 
   private:
-    int CheckState();
+    State CheckState();
 
     int pinLight;
     int pinSwitch;
     State switchState;
 };
-
-
-
-
 
 #endif
