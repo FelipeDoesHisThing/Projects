@@ -10,11 +10,11 @@ void setup()
 {
   Serial.begin(9600);
 
-  light.Init(HeartPin, SwitchPin);
+  light.Init(HeartPin, SwitchPin); //Initialize Values
 }
 
 void loop() 
 {
-  light.Blink();
+  light.Blink(); //Check if the device has been shaken
 }
 

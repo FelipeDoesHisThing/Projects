@@ -1,5 +1,11 @@
 #include "Light.h"
 
+/**
+ * @brief Initializer Function for Light Object
+ * 
+ * @param LightPin Output Pin for Light
+ * @param SwitchPin Input Pin for Switch
+ */
 void Light::Init(int LightPin, int SwitchPin)
 {
   pinLight = LightPin;
@@ -9,6 +15,10 @@ void Light::Init(int LightPin, int SwitchPin)
   pinMode(pinSwitch, INPUT);
 }
 
+/**
+ * @brief Function for Blinking when Device is Shaken
+ * 
+ */
 void Light::Blink()
 {
   State before = CheckState();
@@ -31,6 +41,11 @@ void Light::Blink()
   return;
 }
 
+/**
+ * @brief Check the Current State of Switch
+ * 
+ * @return State of the Switch
+ */
 Light::State Light::CheckState()
 {
   if(pinSwitch == HIGH) switchState = ON;
