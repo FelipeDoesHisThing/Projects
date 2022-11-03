@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "Light.h"
+#include "../lib/Light/Light.h"
 
 const int HeartPin = 3;
 const int SwitchPin = 2;
