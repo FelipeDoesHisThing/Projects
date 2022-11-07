@@ -23,21 +23,33 @@ void Light::Blink()
 {
   State before = CheckState();
 
-  delay(200);
+
+  delay(500);
 
   if(CheckState() != before)
   {
     digitalWrite(pinLight, HIGH);
     delay(200);
     digitalWrite(pinLight, LOW);
-    delay(500);
+    delay(200);
     digitalWrite(pinLight, HIGH);
-    delay(500);
+    delay(400);
+    digitalWrite(pinLight, LOW);
+
+    delay(400);
+
+    digitalWrite(pinLight, HIGH);
+    delay(200);
+    digitalWrite(pinLight, LOW);
+    delay(200);
+    digitalWrite(pinLight, HIGH);
+    delay(400);
     digitalWrite(pinLight, LOW);
 
     return;
   }
 
+  // Serial.println("Not ON");
   return;
 }
 
@@ -48,7 +60,7 @@ void Light::Blink()
  */
 Light::State Light::CheckState()
 {
-  if(pinSwitch == HIGH) switchState = ON;
+  if(digitalRead(pinSwitch)) switchState = ON;
   else switchState = OFF;
   
   return switchState;

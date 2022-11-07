@@ -1,8 +1,8 @@
 #include <Arduino.h>
 #include "../lib/Light/Light.h"
 
-const int HeartPin = 3;
-const int SwitchPin = 2;
+const int HeartPin = 4;
+const int SwitchPin = A5;
 
 Light light;
 
