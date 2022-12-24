@@ -1,0 +1,5 @@
+opencv-python
+pyserial
+RPLCD
+Pillow
+termcolor
